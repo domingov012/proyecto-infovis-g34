@@ -67,12 +67,24 @@ fetch("./output_filtered.json")
           [1, "#440154FF"],
         ],
         colorbar: {
+          
+          // orientación barra
+          orientation: "h",
           y: 0,
-          yanchor: "bottom",
-          title: {
-            text: "Denuncias/100 mil habitantes",
-            side: "right",
+          //El lugar donde se alinea el siguiente objeto
+          yanchor: "top",
+          // cambiar color de etiquetas
+          tickfont: {
+            color: "white",
           },
+          title: {
+            text: "N° de denuncias cada 100 mil habitantes",
+            side: "top",
+            // cambiar color de título
+            font: {
+              color: "white",
+            },
+          },         
         },
       },
     ];
