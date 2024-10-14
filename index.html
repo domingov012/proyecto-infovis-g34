@@ -10,21 +10,44 @@
 
   <body>
     <div id="title">
-      
-      <h1>
-        Tasa de Robos de Vehículos Motorizados (2023) 
-      </h1>
+      <h1>Tasa de Robos de Vehículos Motorizados (2023)</h1>
     </div>
 
     <div id="subtitle">
-      
       <h3>
-      
-        <p style="text-align: center;">
-          
-        Comunas de la provincia de Santiago de Chile
+        <p style="text-align: center; font-size: x-large">
+          Comunas de la provincia de Santiago de Chile
+        </p>
       </h3>
-      <div id="map"></div>
+
+      <div style="display: flex; gap: 50px">
+        <div id="map">
+          <img
+            src="icons/theft_vandalism.png"
+            style="
+              width: 100px;
+              height: 100px;
+              position: absolute;
+              top: 10px;
+              left: 20px;
+            "
+          />
+        </div>
+
+        <img
+          src="icons/tabla_comunas.jpg"
+          alt=""
+          style="width: 400px; height: 415px"
+        />
+      </div>
+      <br />
+      <div>
+        Fuente de datos:
+        <a href="https://cead.spd.gov.cl/estadisticas-delictuales/"
+          >Estadísticas Delictuales del Centro de Estudios y Análisis del Delito
+          (CEAD)</a
+        >
+      </div>
       <div id="leyenda"></div>
     </div>
   </body>
@@ -50,8 +73,4 @@
   <script type="module" src="./main.js"></script>
 
   <!-- insertar una imagen de la carpeta icons y que esta esté alineada en la parte inferior -->
-
-  
-  <img src="icons/tabla_comunas.jpeg" alt="" style="width: 700px; height: 150px;" >
-
 </html>
