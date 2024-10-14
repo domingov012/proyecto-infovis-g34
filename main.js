@@ -67,7 +67,6 @@ fetch("./output_filtered.json")
           [1, "#440154FF"],
         ],
         colorbar: {
-          
           // orientación barra
           orientation: "h",
           y: 0,
@@ -84,7 +83,7 @@ fetch("./output_filtered.json")
             font: {
               color: "white",
             },
-          },         
+          },
         },
       },
     ];
@@ -112,11 +111,11 @@ fetch("./output_filtered.json")
     });
 
     function ftop(x) {
-      return `${(250 / -0.28642362708) * (x + 33.1035763729) + 10}px`;
+      return `${(250 / -0.28642362708) * (x + 33.1035763729) - 55}px`;
     }
 
     function fleft(x) {
-      return `${(400 / 0.5055506629) * (x + 71.0755506629) - 55}px`;
+      return `${(400 / 0.5055506629) * (x + 71.0755506629) + 1}px`;
     }
 
     labelCoord.forEach((comuna) => {
