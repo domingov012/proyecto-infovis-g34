@@ -78,6 +78,6 @@ fetch("./output_filtered.json")
     Plotly.newPlot(mapa, data, layout, {
       scrollZoom: false,
       displayModeBar: false,
-      //staticPlot: true,
+      staticPlot: true,
     });
   });
