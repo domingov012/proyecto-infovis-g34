@@ -39,6 +39,15 @@ fetch("./output_filtered.json")
         featureidkey: "properties.Comuna",
         zmin: Math.min(...mapValues),
         zmax: Math.max(...mapValues),
+        autocolorscale: false,
+        colorscale: [
+          [0, "#73D055FF"],
+          [0.2, "#49B370FF"],
+          [0.4, "#1F968BFF"],
+          [0.6, "#39568CFF"],
+          [0.8, "#3F2C70FF"],
+          [1, "#440154FF"],
+        ],
         colorbar: {
           y: 0,
           yanchor: "bottom",
@@ -66,9 +75,9 @@ fetch("./output_filtered.json")
       plot_bgcolor: "rgba(0,0,0,0)",
     };
 
-    Plotly.newPlot(mapa, data, layout, {
+    myPlot = Plotly.newPlot(mapa, data, layout, {
       scrollZoom: false,
       displayModeBar: false,
-      staticPlot: true,
+      //staticPlot: true,
     });
   });
