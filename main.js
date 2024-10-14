@@ -40,11 +40,24 @@ fetch("./output_filtered.json")
         zmin: Math.min(...mapValues),
         zmax: Math.max(...mapValues),
         colorbar: {
+          
+          // orientación barra
+          orientation: "h",
           y: 0,
-          yanchor: "bottom",
+          //El lugar donde se alinea el siguiente objeto
+          yanchor: "top",
+          // cambiar color de etiquetas
+          tickfont: {
+            color: "white",
+          },
           title: {
-            text: "Denuncias/100 mil habitantes",
-            side: "right",
+            text: "N° de denuncias cada 100 mil habitantes",
+            side: "top",
+            // cambiar color de título
+            font: {
+              color: "white",
+            },
+            
           },
         },
       },
