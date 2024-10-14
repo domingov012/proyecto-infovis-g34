@@ -75,7 +75,7 @@ fetch("./output_filtered.json")
       plot_bgcolor: "rgba(0,0,0,0)",
     };
 
-    myPlot = Plotly.newPlot(mapa, data, layout, {
+    Plotly.newPlot(mapa, data, layout, {
       scrollZoom: false,
       displayModeBar: false,
       //staticPlot: true,
