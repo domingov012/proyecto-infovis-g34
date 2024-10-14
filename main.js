@@ -29,6 +29,14 @@ fetch("./output_filtered.json")
     console.log(mapData);
     const { mapLocations, mapValues } = getLocations(mapData);
     console.log(mapLocations.length);
+    var lon_lat = [
+      ["Quinta Normal", -70.69704336561283, -33.4281729258164, "2"],
+      ["Vitacura", -70.56605781945112, -33.380121866596426, "5"],
+      ["Cerrillos", -70.71282161825738, -33.50231206439632, "3"],
+      ["La Cisterna", -70.66519284891774, -33.5297452384845, "1"],
+      ["San Miguel", -70.65391085022146, -33.49772663949171, "4"],
+    ];
+    
     var data = [
       {
         type: "choroplethmap",
@@ -39,6 +47,15 @@ fetch("./output_filtered.json")
         featureidkey: "properties.Comuna",
         zmin: Math.min(...mapValues),
         zmax: Math.max(...mapValues),
+        autocolorscale: false,
+        colorscale: [
+          [0, "#73D055FF"],
+          [0.2, "#49B370FF"],
+          [0.4, "#1F968BFF"],
+          [0.6, "#39568CFF"],
+          [0.8, "#3F2C70FF"],
+          [1, "#440154FF"],
+        ],
         colorbar: {
           y: 0,
           yanchor: "bottom",
@@ -48,6 +65,18 @@ fetch("./output_filtered.json")
           },
         },
       },
+      {
+        type: "scattermap",
+        mode: "markers+text",
+        lon: lon_lat.map((item) => item[1]),
+        lat: lon_lat.map((item) => item[2]),
+        marker: { 
+          size: 20,
+          color: "red",
+        },//symbol: ["bus", "bus", "bus"] },
+        text: lon_lat.map((item) => item[4]),
+        textposition: "bottom right",
+      }
     ];
 
     var layout = {
@@ -69,6 +98,6 @@ fetch("./output_filtered.json")
     Plotly.newPlot(mapa, data, layout, {
       scrollZoom: false,
       displayModeBar: false,
-      staticPlot: true,
+      //staticPlot: true,
     });
   });
