@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>E1 InfoVis Grupo 34</title>
+    <title>E2 InfoVis Grupo 34</title>
     <script
       src="https://cdn.plot.ly/plotly-2.35.2.min.js"
       charset="utf-8"
@@ -9,36 +9,28 @@
   </head>
 
   <body>
+    <audio id="hoversound" src="audio.mp3"></audio>
     <div id="title">
-      <h1>Tasa de Robos de Vehículos Motorizados (2023)</h1>
+      <h1>Las comunas más peligrosas para conducir un vehículo</h1>
     </div>
-
     <div id="subtitle">
       <h3>
         <p style="text-align: center; font-size: x-large">
-          Comunas de la provincia de Santiago de Chile
+          Provincia de Santiago de Chile
         </p>
+  
       </h3>
+      <div class="volume-control">
+        <input type="range" id="year_slider" min="2018" max="2024" step="1" value="2024">
+        <label for="volumeSlider"><span id="year_value">Media 2018 - 2024</span></label>
+
+        
+      </div>
 
       <div style="display: flex; gap: 50px">
         <div id="map">
-          <img
-            src="icons/theft_vandalism.png"
-            style="
-              width: 100px;
-              height: 100px;
-              position: absolute;
-              top: 10px;
-              left: 20px;
-            "
-          />
+          
         </div>
-
-        <img
-          src="icons/tabla_comunas.jpg"
-          alt=""
-          style="width: 400px; height: 415px"
-        />
       </div>
       <br />
       <div>
@@ -67,6 +59,19 @@
     h1 {
       max-width: 60vw;
       text-align: center;
+      margin-bottom: 0;
+
+    }
+    .volume-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      gap: 10px;
+      margin-bottom: 20px;
+      input  {
+        width: 400px;
+      }
     }
   </style>
 
